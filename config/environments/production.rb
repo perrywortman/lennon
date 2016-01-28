@@ -80,16 +80,16 @@ Rails.application.configure do
   # Mail settings
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address              => "smtp.gmail.com",
+    :address              => 'smtp.gmail.com',
     :port                 => 587,
-    :domain               => 'lennon.io',
+    :domain               => 'www.lennon.io',
     :user_name            => ENV['MAIL_USER'],
     :password             => ENV['MAIL_PASS'],
     :authentication       => 'plain',
     :enable_starttls_auto => true
   }
-  config.action_mailer.default_url_options = { host: 'lennon.io' }
+  config.action_mailer.default_url_options = { host: 'www.lennon.io' }
 
   # From address
-  ActionMailer::Base.default :from => 'W. Perry Wortman at Lennon.io'
+  ActionMailer::Base.default :from => 'Perry at Lennon.io'
 end
